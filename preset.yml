@@ -1,0 +1,31 @@
+schema_version: "1.0"
+
+preset:
+  id: "joao"
+  name: "Joao Clarify and Plan Preset"
+  version: "0.1.0"
+  description: "Overrides stock clarify and plan commands with João's requirements-only and recursive approval-driven workflows."
+  author: "Joao Antunes"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.7.4.dev0"
+
+provides:
+  templates:
+    - type: "command"
+      name: "speckit.clarify"
+      file: "commands/speckit.clarify.md"
+      description: "Requirements-phase, provenance-aware clarify workflow"
+      replaces: "speckit.clarify"
+    - type: "command"
+      name: "speckit.plan"
+      file: "commands/speckit.plan.md"
+      description: "Recursive, approval-driven planning workflow"
+      replaces: "speckit.plan"
+
+tags:
+  - "clarify"
+  - "plan"
+  - "preset"
+  - "workflow"
